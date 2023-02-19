@@ -1,4 +1,5 @@
 import { companiesData } from "./companies-data";
+import { extraRecord } from "./extra-record";
 
 const before = document.getElementById("before");
 before.innerHTML = JSON.stringify(companiesData, null, 2);
