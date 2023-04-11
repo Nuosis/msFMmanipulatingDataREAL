@@ -3,12 +3,9 @@ import { fmData } from "./fmData";
 //import { extraRecord } from "./extra-record";
 
 const before = document.getElementById("before");
-const after = document.getElementById("after");
-
-const custArray = [... new Set( fmData.map ( obj => obj.fieldData.customerName ))].sort();
 
 //ARRAY
-//const manipulatedData = fmData[3].fieldData;
+const manipulatedData = fmData[3].fieldData;
 //const manipulatedData = companiesData.pop(); //take last object out and set to mainpulatedData
 //const manipulatedData = companiesData.shift(); //take first object out and set to mainpulatedData
 //const manipulatedData = companiesData.push(extraRecord); //add new object into the end of array
@@ -43,4 +40,5 @@ const custArray = [... new Set( fmData.map ( obj => obj.fieldData.customerName )
 //Lake Gertrude
 
 before.innerHTML = JSON.stringify(companiesData, null, 2);
-after.innerHTML = JSON.stringify(custArray, null, 2);
+const after = document.getElementById("after");
+after.innerHTML = JSON.stringify(manipulatedData, null, 2);
